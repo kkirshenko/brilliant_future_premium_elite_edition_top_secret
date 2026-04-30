@@ -45,7 +45,7 @@ std::string num_to_words(int n) {
     std::string out;
     int mil  = n / 1000000;
     int thou = (n / 1000) % 1000;
-    int unit = n % 1000;
+    int end = n % 1000;
 
     const char* millions[]  = {"миллион", "миллиона", "миллионов"};
     const char* thousands[] = {"тысяча", "тысячи", "тысяч"};
@@ -57,9 +57,9 @@ std::string num_to_words(int n) {
         if (!out.empty()) out += ' ';
         out += chunk_to_words(thou, true) + " " + thousands[ending_idx(thou)];
     }
-    if (unit) {
+    if (end) { // Изменено с unit на end
         if (!out.empty()) out += ' ';
-        out += chunk_to_words(unit, false);
+        out += chunk_to_words(end, false);
     }
     return out;
 }
