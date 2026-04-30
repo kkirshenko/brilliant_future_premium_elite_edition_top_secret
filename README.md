@@ -6,6 +6,8 @@
 ### Компиляторы
 https://www.jdoodle.com/online-compiler-c++-ide
 
+https://www.programiz.com/cpp-programming/online-compiler/
+
 ### Принцип работы
 
 1.  **Массивы ("man", "fem", "teens" и другие):**
