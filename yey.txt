@@ -57,7 +57,7 @@ std::string num_to_words(int n) {
         if (!out.empty()) out += ' ';
         out += chunk_to_words(thou, true) + " " + thousands[ending_idx(thou)];
     }
-    if (end) { // Изменено с unit на end
+    if (end) {
         if (!out.empty()) out += ' ';
         out += chunk_to_words(end, false);
     }
